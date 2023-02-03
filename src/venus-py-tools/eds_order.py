@@ -1,5 +1,3 @@
-import base64
-
 # 小写26个字母
 SC26 = []
 for one in range(97, 123):
@@ -21,7 +19,7 @@ a90 = '9876543210'
 
 
 # 自定义加密
-def rebuild_index(s):
+def _desc(s):
     if str(s) == 'null':
         print('null', s)
         return '***此处有空值***'
@@ -30,22 +28,22 @@ def rebuild_index(s):
         return '***此处有None值***'
     else:
         bstr = s
-        ers = []
+        ctr = []
         for x in range(0, len(bstr)):
             if (bstr[x]).isdigit():
-                ers.append(a90[int(bstr[x])])
+                ctr.append(a90[int(bstr[x])])
             elif B26.find(bstr[x]) > -1:
-                ers.append(B62[int(B26.find(bstr[x]))])
+                ctr.append(B62[int(B26.find(bstr[x]))])
             elif S26.find(bstr[x]) > -1:
-                ers.append(S62[int(S26.find(bstr[x]))])
+                ctr.append(S62[int(S26.find(bstr[x]))])
             else:
-                ers.append(bstr[x])
+                ctr.append(bstr[x])
 
-        return ''.join(ers)
+        return ''.join(ctr)
 
 
 # 自定义解密
-def reset_index(oao):
+def _asc(oao):
     drs = []
     for a in range(0, len(oao)):
         if (oao[a]).isdigit():
