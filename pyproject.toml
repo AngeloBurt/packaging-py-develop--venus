@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "venus_py_tools"
-version = "0.0.5"
+version = "0.0.6"
 authors = [
   { name="Angelo Burtot", email="542685010@qq.com" },
 ]
