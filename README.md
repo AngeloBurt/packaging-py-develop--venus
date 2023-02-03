@@ -5,7 +5,7 @@ Python package for personal development
 ## Install
 
 ```
-pip install venus-tools
+pip install PyAase
 ```
 
 ## Usage
