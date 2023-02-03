@@ -1,25 +1,30 @@
 ## Project description
  
-Change the sequence of strings after base64 encryption
+Python package for personal development
 
 ## Install
 
 ```
-pip install venus-py-tools
+pip install venus-tools
 ```
 
 ## Usage
 
 ```
-from venus-py-tools import eds_un_re_index as eds2
+from PyAase import ead
 
-enc_str = 'VmVudXM='
+# Change the sequence of strings after base64 encryption
+temp1 = ead.enc_base64('Aase')
+print(temp1)  # QWFzZQ==
+temp2 = ead.dec_base64(temp1)
+print(temp2)  # Aase
 
-# rebuild_indexReplace A with Z(lowercase and so on) and 0 with 9...
-re_enc_str = eds2.rebuild_index(enc_str) 
+# clo: A with Z(lowercase and so on) and 0 with 9...
+clo_temp1 = ead.clo(temp1)
+print(clo_temp1)  # JDUaAJ==
 
-print(re_enc_str) # EnEfwCN=
-
+clo_temp2 = ead.clo(clo_temp1)
+print(clo_temp2)  # QWFzZQ==
 ```
 
 
